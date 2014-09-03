@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GarageDoorRemote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oM5-qd-8cf">
+                                <rect key="frame" x="0.0" y="350" width="600" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-16-LdX">
+                                        <rect key="frame" x="218" y="104" width="165" height="51"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                        <state key="normal" title="OPEN" backgroundImage="main_up">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="main_up">
+                                            <color key="titleColor" white="0.89681227190000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="218" y="74" width="165" height="51"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="mainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DHJ-6P-Pzm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="uwa-16-LdX" secondAttribute="centerX" constant="-0.5" id="Kk4-iL-pBW"/>
+                                    <constraint firstAttribute="centerY" secondItem="uwa-16-LdX" secondAttribute="centerY" constant="20.5" id="kQa-aP-cHv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-A1-sWn">
+                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXt-ZI-2ip">
+                                        <rect key="frame" x="226" y="182.5" width="148" height="120"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door_open" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-cc-Eyb">
+                                                <rect key="frame" x="0.0" y="-1" width="148" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="148" id="TWS-N4-Eud"/>
+                                                    <constraint firstAttribute="height" constant="120" id="lJV-3j-5lt"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door_closed" translatesAutoresizingMaskIntoConstraints="NO" id="t95-Aq-Z2I">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="120"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="t95-Aq-Z2I" firstAttribute="top" secondItem="ZXt-ZI-2ip" secondAttribute="top" id="Fiw-vI-PrL"/>
+                                            <constraint firstAttribute="width" constant="148" id="LfJ-re-fF0"/>
+                                            <constraint firstAttribute="height" constant="120" id="ONM-9p-vyk"/>
+                                            <constraint firstItem="t95-Aq-Z2I" firstAttribute="leading" secondItem="ZXt-ZI-2ip" secondAttribute="leading" id="XUr-x0-Iq2"/>
+                                            <constraint firstItem="t95-Aq-Z2I" firstAttribute="height" secondItem="ZXt-ZI-2ip" secondAttribute="height" id="eau-h0-aVa"/>
+                                            <constraint firstItem="dfo-cc-Eyb" firstAttribute="top" secondItem="ZXt-ZI-2ip" secondAttribute="top" constant="-1" id="gPW-Ak-mZR"/>
+                                            <constraint firstItem="t95-Aq-Z2I" firstAttribute="width" secondItem="ZXt-ZI-2ip" secondAttribute="width" id="iyG-Le-EBW"/>
+                                            <constraint firstItem="dfo-cc-Eyb" firstAttribute="leading" secondItem="ZXt-ZI-2ip" secondAttribute="leading" id="spQ-NC-j4p"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="door_frame" translatesAutoresizingMaskIntoConstraints="NO" id="Ba2-r0-bEz">
+                                        <rect key="frame" x="188" y="121" width="225" height="181"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="FXB-9v-MOQ"/>
+                                            <constraint firstAttribute="height" constant="181" id="cNF-QG-0w7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Ba2-r0-bEz" secondAttribute="centerX" constant="-0.5" id="P5b-JN-Im4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ba2-r0-bEz" secondAttribute="bottom" id="Soy-D4-65L"/>
+                                    <constraint firstItem="ZXt-ZI-2ip" firstAttribute="centerX" secondItem="Ba2-r0-bEz" secondAttribute="centerX" constant="-0.5" id="bIQ-Ul-1fi"/>
+                                    <constraint firstItem="ZXt-ZI-2ip" firstAttribute="centerY" secondItem="Ba2-r0-bEz" secondAttribute="centerY" constant="31" id="uPw-uG-suJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4m2-A1-sWn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RaB-xb-F6c"/>
+                            <constraint firstItem="oM5-qd-8cf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ZRk-XG-EkC"/>
+                            <constraint firstItem="4m2-A1-sWn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bgo-rc-9g3"/>
+                            <constraint firstItem="oM5-qd-8cf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gsV-cg-qPe"/>
+                            <constraint firstItem="oM5-qd-8cf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" constant="-50" id="k6k-uX-UIv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oM5-qd-8cf" secondAttribute="bottom" id="oTq-ow-d2t"/>
+                            <constraint firstItem="4m2-A1-sWn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="q5n-ic-Q0V"/>
+                            <constraint firstItem="4m2-A1-sWn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="ylw-6f-qQZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closedConstraint" destination="Fiw-vI-PrL" id="1QE-RW-Bdk"/>
+                        <outlet property="closedImage" destination="t95-Aq-Z2I" id="rzm-MD-jhb"/>
+                        <outlet property="mainButton" destination="uwa-16-LdX" id="DjX-gu-rmb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="door_closed" width="149" height="121"/>
+        <image name="door_frame" width="225" height="181"/>
+        <image name="door_open" width="149" height="121"/>
+        <image name="main_up" width="167" height="53"/>
+    </resources>
+</document>
